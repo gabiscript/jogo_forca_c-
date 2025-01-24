@@ -1,42 +1,54 @@
 # Jogo da Forca em C++
 
-Este é um simples jogo da forca implementado em C++. O programa permite ao jogador adivinhar palavras e gerencia um banco de palavras que pode ser atualizado diretamente durante o jogo.
+Um jogo da forca simples, implementado em C++, com suporte a banco de palavras dinâmico.
 
 ## Funcionalidades
-
-- **Jogo da Forca**: O jogador tenta adivinhar uma palavra secreta com um limite de 5 erros.
-- **Banco de Palavras**: As palavras são armazenadas em um arquivo `palavras.txt`, que é carregado ao iniciar o jogo.
-- **Adição de Novas Palavras**: O jogador pode adicionar novas palavras ao banco ao final do jogo.
+- **Jogo da Forca**: Adivinhe a palavra secreta com até 5 erros permitidos.
+- **Banco de Palavras**: As palavras são armazenadas no arquivo `palavras.txt`.
+- **Adição de Novas Palavras**: Após vencer o jogo, você pode adicionar palavras ao banco.
 
 ## Requisitos
+- Compilador C++ (GCC, Clang, etc.).
+- Um arquivo `palavras.txt` no mesmo diretório do executável, contendo:
+  - Primeira linha: número de palavras.
+  - Demais linhas: as palavras.
 
-- Um compilador C++ (como GCC ou Clang).
-- Um arquivo `palavras.txt` na mesma pasta do executável, contendo as palavras e o número de palavras na primeira linha.
-
-### Exemplo do arquivo `palavras.txt`
-
-3 melancia banana abacaxi
-
-r
-Copiar
-Editar
+### Exemplo do arquivo `palavras.txt`:
+```
+3
+melancia
+banana
+abacaxi
+```
 
 ## Como Jogar
-
-1. Compile o código:
+1. Compile o programa:
    ```bash
    g++ -o jogo_da_forca jogo_da_forca.cpp
-Execute o programa:
-bash
-Copiar
-Editar
-./jogo_da_forca
-Siga as instruções no terminal para adivinhar a palavra secreta.
-Ao final do jogo, você pode optar por adicionar novas palavras ao banco.
-Regras do Jogo
-Cada letra correta revela sua posição na palavra secreta.
-Cada chute incorreto adiciona um erro. Após 5 erros, o jogo termina.
-O jogador vence se descobrir todas as letras antes de alcançar 5 erros.
-Observações
-Certifique-se de que o arquivo palavras.txt está acessível e formatado corretamente.
-Caso o programa não consiga acessar o arquivo, ele exibirá uma mensagem de erro e encerrará a execução.
+   ```
+2. Execute:
+   ```bash
+   ./jogo_da_forca
+   ```
+3. Siga as instruções no terminal para adivinhar a palavra secreta.
+4. Ao vencer, você poderá adicionar novas palavras ao banco.
+
+## Regras do Jogo
+- Cada chute correto revela letras na palavra.
+- 5 chutes errados levam à derrota.
+- O jogo é vencido ao adivinhar todas as letras da palavra.
+
+## Observações
+- Certifique-se de que `palavras.txt` está configurado corretamente.
+- Se o arquivo não for acessível, o programa exibirá um erro e encerrará.
+
+## Melhorias Futuras
+- Suporte a caracteres especiais.
+- Interface gráfica para maior interatividade.
+- Validação mais robusta para entradas de usuário.
+
+## Licença
+Este projeto é de uso livre e tem fins educativos.
+
+Divirta-se jogando!
+
